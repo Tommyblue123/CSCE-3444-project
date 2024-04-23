@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+
+    <link rel="stylesheet" type="text/css" href="User_Dashboard_stylesheet.css">
+</head>
+<body>
+    <div class="content-container">
+
+        <div class="nav">
+            <nav class="nav-bar" style="display: flex;margin-top: 0px;margin-left: 0px;height: auto;width: 100%;
+                                        max-width: 1200px;margin-bottom: 0px;position: relative;">
+                <a class="logo-link" href="/index.html">
+                    <img src= "logo_with_transparent_background.png" alt="Logo">
+                </a>
+                <button class="hamburger">&#9776;</button>
+                <div class="navigation">
+                    <a href="#" >Support</a>
+                    <a href="#" >Settings</a>
+                    
+                </div>
+                <a href="#" ><img src="user_profile.png" alt="Profile Picture" class="profile-pic-1"></a>
+                <button id="LogOut-Button" class="btnLogin-popup">Log Out</button>
+            </nav>
+        </div>
+
+        <div class="welcome-div" >
+            <h2 id="userNameDisplay">Welcome, User!</h2>
+            <img src="user_profile.png" alt="Profile Picture" class="profile-pic">
+        </div>
+
+
+        <nav class="sidebar">
+            <h2 class="sidebar-title">Menu</h2>
+            <ul>
+                <li><a href="/Edit-food.html">Available Donations</a></li>
+                <li><a href="#request-food">Request Food</a></li>
+                <li><a href="/Add-food.html">Create Food Donations</a></li>
+                <li><a href="#donation-history">Donation History</a></li>
+                <li><a href="#messages-notifications">Messages/Notifications</a></li>
+            </ul>
+        </nav>
+    </div>
+
+
+    <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-analytics-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-database-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-auth-compat.js"></script>
+
+    <script src="User_Dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login_page</title>
+
+    <link rel="stylesheet" type="text/css" href="Login page_stylesheet.css">
+</head>
+<body>
+
+    <img src= "1.png" alt="Full Page Background" class="full-page">
+
+    <header class="site-header">
+        <a href="/index.html">
+            <img class="logo" src="logo_with_transparent_background.png" alt="Logo">
+        </a>
+    </header>
+
+    <!-- <div class="text">Your action today feeds the change for tomorrow. Login to Donated or receive, and be the bridge to a hunger-free community.</div> -->
+
+    <div class="wrapper">
+        <span id="closeButton" class="icon-close">
+            <ion-icon name="close"></ion-icon>
+        </span>
+
+        <div class="form-box login">
+            <h2>Login</h2>
+            <form id="login-form" action="#">
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                    <input type="email" id="login-email" required>
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                    <input type="password" id="login-password" required>
+                    <label>Password</label>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox">Remember me</label>
+                    <a href="#">Forgot Password?</a>
+                </div>
+                <button type="submit" class="btn">Login</button>
+                <div class="login-register">
+                    <p> Don't have an account? <a href="User_Registration.html" class="register-link">Register</a></p>
+                </div>
+
+            </form>
+            
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-left">
+            <p> © Share the Spare Initiative | All right reserved.</p>
+        </div>
+        <div class="footer-right">
+            <a href="#privacy">Privacy Policy</a>
+            <a href="#terms">Terms of Use</a>
+            <a href="#contact">Contact Us</a>
+        </div>
+    </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-analytics-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-database-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-auth-compat.js"></script>
+
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="Login page.js"></script>
+</body>
+</html>

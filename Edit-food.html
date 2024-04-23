@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit-food</title>
+
+    <link rel="stylesheet" type="text/css" href="Edit-food_stylesheet.css">
+</head>
+<body>
+
+    <div class="nav">
+        <nav class="nav-bar">
+            <a class="logo-link" href="/User_Dashboard.html">
+                <ion-icon name="arrow-back-outline"></ion-icon>
+                <span class="logo-text">back to Dashboard</span>
+            </a>
+        </nav>
+    </div>
+
+    <div id="foodItemsDisplayContainer"></div>
+
+    
+
+
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Edit Food Item</h2>
+          <!-- Form similar to the add item form but for editing -->
+            <form id="edit-food-form">
+                <div class="input-box">
+                    <label>Food Item Name</label>
+                    <input type="text" id="foodName" required>
+                </div>
+                <div class="input-box">
+                    <label>Quantity Available</label>
+                    <input type="text" id="quantity-Available" required>
+                </div>
+                <div class="input-box">
+                    <label>Best Before Date</label>
+                    <input type="date" id="BBD" required>
+                </div>
+                <div class="input-box">
+                    <label for="food-type">Type of Food <span class="info-icon"><ion-icon name="help-circle-outline"></ion-icon></span></label>
+                    <input type="text" id="food-type" required>
+                    <div class="tooltip">Examples: fruits, vegetables, dairy, grains, prepared meals</div>
+                </div>
+                <div class="input-box">
+                    <label for="packaging-info">Packaging Information <span class="info-icon"><ion-icon name="help-circle-outline"></ion-icon></span></label>
+                    <input type="text" id="packaging-info"  required>
+                    <div class="tooltip">Examples: packaged, bulk, individual servings</div>
+                </div>
+                <div class="input-box-1">
+                    <label>Additional Notes</label>
+                    <textarea id="description" placeholder="Additional Notes......"></textarea>
+                </div>
+                <input type="hidden" id="edit-food-item-id">
+                <button type="submit" id="btn-submit">Save Changes</button>
+          </form>
+        </div>
+      </div>
+      
+
+
+    <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-analytics-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-database-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-auth-compat.js"></script>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="Edit-food.js"></script>
+</body>
+</html>

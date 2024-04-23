@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geolocation Services</title>
+    <link rel="stylesheet" href="Geolocation-stylesheet.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBp2dOMQzlAMgO8J20NqwWM0Ru80zz7elM&loading=async&libraries=places&callback=initMap" async defer></script>
+</head>
+<body>
+    <div class="content-container">
+        <nav class="nav-bar" style="display: flex;margin-top: 0px;margin-left: 0px;height: auto;width: 100%;
+                                    max-width: 1200px;margin-bottom: 0px;position: relative;">
+            <a class="logo-link" href="/index.html">
+                <img src= "logo_with_transparent_background.png" alt="Logo">
+            </a>
+            <button class="hamburger">&#9776;</button>
+            <div class="navigation">
+                <a href="/About-us.html" >About Us</a>
+                <a href="/How-works.html" >How It Works</a>
+                <a href="/Geolocation.html" >Find Food</a>
+                <a href="/food-donation.html" >Donated Food</a>
+                
+            </div>
+            <a href="/User_Dashboard.html" ><img src="user_profile.png" alt="Profile Picture" class="profile-pic"></a>
+            <button id="loginButton" class="btnLogin-popup">Join Now</button>
+        </nav>
+
+        <div class="container-T">
+            <div class="text-H">
+                <h1>Discover Free Food in Your Area!</h1>
+            </div>
+            <div class="text-S">
+                <p>
+                    Are you in need of some help finding free food in your community? No worries, we're happy to assist you! Simply enter your zip code or state to find a food bank near you. 
+                    We'll provide you with a marker on the map that you can click on to get their contact information. 
+                    Connecting with your local food bank is the first step towards getting free food and grocery items.
+                </p>
+            </div>
+        </div>
+
+
+        <div class="map-box">
+            <div id="map"></div>
+            <div class="map-box-2">
+                <div class="input-box">
+                    <input id="search-input" type="text" placeholder="Search by Zip or State">
+                </div>
+                <button id="clear-search" style="display: none; position: relative; right: 30px;">
+                    <ion-icon name="close"></ion-icon>
+                </button>
+                <button id="center-map">
+                    <ion-icon name="locate"></ion-icon>
+                </button>
+                <button onclick="searchPlaces()">
+                    <ion-icon name="search-sharp"></ion-icon>
+                </button>
+            </div>
+        </div>
+
+        <section id="educational-content">
+            <h2>Learn About Food Security</h2>
+            
+            <article class="content-item">
+                <h3>Understanding Food Insecurity</h3>
+                <p>Food insecurity is a multifaceted issue that affects millions of individuals and families worldwide. 
+                    It refers to the lack of consistent access to enough food for an active, healthy life. Understanding 
+                    the causes and impacts of food insecurity is crucial in addressing this pressing global challenge. 
+                    Additionally, exploring how communities are responding sheds light on effective strategies to combat food insecurity.
+                </p>
+                <a href="https://www.feedingamerica.org/hunger-in-america/food-insecurity#:~:text=Food%20insecurity%20is%20when%20people,effective%20way%20to%20end%20hunger." target="_blank">Read More</a>
+            </article>
+            
+            <article class="content-item">
+                <h3>How to Help Your Local Food Bank</h3>
+                <p>Discover how you can make a difference in your community by supporting food banks.</p>
+                <div class="video-container">
+                    <iframe width="853" height="480" src="https://www.youtube.com/embed/KZf9_GdDff0" title="5 tips to reduce food waste" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            
+            <!-- Add more content as needed -->
+        </section>
+
+        <section id="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <button class="faq-question">How do I find food using the map feature?<span class="toggle-icon"><ion-icon name="add-circle-outline"></ion-icon></span></button>
+                <div class="faq-answer">
+                    <p>You can use the search bar to enter your location and find food banks and donation centers near you.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">Who can receive food at a food pantry or meal program?<span class="toggle-icon"><ion-icon name="add-circle-outline"></ion-icon></span></button>
+                <div class="faq-answer">
+                    <p>Anyone who needs extra help affording food can visit a food pantry or meal program. Some pantries or programs may have additional requirements, like living in a certain area.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">What is it like to visit a food distribution for the first time?<span class="toggle-icon"><ion-icon name="add-circle-outline"></ion-icon></span></button>
+                <div class="faq-answer">
+                    <p>Visiting for the first time might feel scary, but friendly volunteers are there to help.<br><br>
+                        When you arrive, they may ask questions or have you fill out a form about your family's needs. These questions help them give you the right amount of food and connect you with other programs.
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+
+        <footer>
+            <div class="footer-box">
+              <div id="footer-text">
+                <span class="text-H">
+                  <p>Share the Spare</p>
+                </span>
+                <span class="text-S">
+                  <p>
+                    Share the Spare is dedicated to create a future where no food goes to waste, and no one goes hungry
+                  </p>
+                </span>
+                <a href="/User_Registration.html" style="text-decoration: none;"><button id="btn-footer">Join Now</button></a>
+              </div>
+              <div class="footer-links-box">
+                <div class="footer-links">
+                  <span class="text-H">
+                    <p>Explore</p>
+                  </span>
+                  <span><a href="/index.html">Home</a></span>
+                  <span><a href="/About-us.html">About Us</a></span>
+                  <span><a href="/How-works.html">How It Works</a></span>
+                  <span><a href="/Geolocation.html">Find Food</a></span>
+                  <span><a href="#">Donated Food</a></span>
+                </div>
+              </div>
+              <div></div>
+            </div>
+            <div class="footer-foot">
+              <div class="left">
+                <span class="text-L">
+                  <p>© 2024 Share the Spare. All rights reserved</p>
+                </span>
+                <div class="right">
+                  <span class="text-R"><p>Privacy Policy</p></span>
+                  <span class="text-R"><p>Terms and Conditions</p></span>
+                </div>
+              </div>
+            </div>
+          </footer>
+
+    </div>
+
+
+
+    
+
+
+
+   
+    <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-analytics-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-database-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-auth-compat.js"></script>
+
+    <script src="Geolocation.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    
+</body>
+</html>

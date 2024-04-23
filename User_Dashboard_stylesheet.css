@@ -1,0 +1,315 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+:root {
+    --primary-color: #7BD3EA;
+    --secondary-color: #C1F2B0;
+    --accent-color: #333;
+    --text-color: #333;
+    --hover-color: #ddd;
+    --font-family: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    font-family: var(--font-family);
+    background-color: #fff;
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-bar {
+    padding: 20px 0px 10px 0px;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    column-gap: 20px;
+    row-gap: 0px;
+    border-width: 0px 0px 1px 0px;
+    border-color: transparent transparent #a8a8a8 transparent;
+    border-style: none none solid none;
+    border-bottom: 1px solid var(--accent-color);
+}
+
+.logo-link {
+    width: 10%;
+    height: auto;
+}
+
+
+.nav-bar img {
+    
+    width: 110%;
+    height: auto;
+    display: block;
+}
+
+
+@media (max-width: 1200px) {
+
+    .navigation {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: #f9f9f9;
+        position: absolute;
+        top: 70px;
+        width: 20%;
+        height: 560%;
+        left: 900px;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        border-bottom-left-radius: 10%;
+        border-bottom-right-radius: 10%;
+    }
+
+    /* Style for when the menu is active */
+    .navigation.active {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .navigation a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        right: 10%;
+    }
+    
+    .navigation a:hover {
+        background-color: #ddd; /* Highlight on hover */
+    }
+    
+    
+
+    .navigation .btnLogin-popup {
+        position: relative;
+        right: 10%;
+        bottom: -4%;
+    }
+    
+    .navigation .btnLogin-popup:hover {
+        background: #C1F2B0;
+        color: #162938;
+    }
+
+        .hamburger {
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 24px; /* Adjust size as needed */
+        display: block;
+    }
+
+    
+}
+
+@media screen and (min-width: 1200px) {
+    .hamburger {
+        display: none;
+    }
+      .navigation {
+        display: block; /* Always show menu on larger screens */
+    }  
+    /* Additional styles to display the menu inline on larger screens */
+    .navigation {
+        display: inline;
+        margin-right: 10px;
+    }
+    .navigation a {
+        padding: 10px;
+        position: absolute;
+    }
+}
+
+.navigation {
+    display: flex;
+    z-index: 1500;
+    height: auto;
+    width: fit-content;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+    padding: 10px 10px 10px 10px;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 2px;
+    row-gap: 0px;
+    align-items: center;
+}
+
+.nav-bar .navigation a {
+    position: relative;
+    font-size: 16px;
+    font-weight: 500;
+    color: #000000;
+    letter-spacing: 0px;
+    line-height: 26px;
+    padding: 15px 15px 15px 15px;
+    text-decoration: none;
+}
+
+.navigation a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 1px;
+    width: 100%;
+    height: 3px;
+    background: #0e0e0e;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.navigation a:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.nav-bar .profile-pic-1 {
+    position: relative;
+    display: flex;
+    left: 85px;
+    width: 60px; /* Adjust based on desired size */
+    height: 50px; /* Adjust based on desired size */
+    justify-content: center;
+}
+
+.btnLogin-popup {
+    background: var(--primary-color);
+    color: var(--text-color);
+    padding: 10px 42px 10px 42px;
+    border-radius: 100px 100px 100px 100px;
+    border-width: 0px 0px 0px 0px;
+    line-height: 26px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: .5s;
+}
+
+.btnLogin-popup:hover {
+    background-color: var(--secondary-color);
+    color: #162938;
+}
+
+.welcome-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px; /* Add some margin around the div */
+    padding: 20px; /* Add some padding inside the div */
+    background-color: #7BD3EA; /* Light background color */
+    border-radius: 8px; /* Optional: round corners */
+}
+
+.profile-pic {
+    width: 100px; /* Adjust based on desired size */
+    height: 100px; /* Adjust based on desired size */
+    border-radius: 50%; /* Makes the image round */
+    margin-top: 20px; /* Space between the greeting and the profile picture */
+    border: 3px solid #333; /* Optional: add a border around the picture */
+    display: block; /* Ensures it can be centered with margin */
+    margin: 10px auto;
+}
+
+
+.sidebar {
+    /* height: 70vh; Full height of the viewport  */
+    width: 250px; /* Sidebar width */
+    position: fixed; /* Fixed position on the left side */
+    left: 0;
+    top: 0;
+    background-color: rgba(123, 211, 234, 0.9); /* Slight transparency */
+    backdrop-filter: blur(12.5px);
+    padding: 20px 10px; /* Padding inside the sidebar */
+    margin-top: 13%;
+    border-right: 3px solid #000;
+    border-bottom: 3px solid #000;
+    border-top: 3px solid #000;
+    border-top-right-radius: 10px; /* Curve bottom left corner */
+    border-bottom-right-radius: 10px; /* Curve bottom right corner */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.sidebar-title {   
+    margin-bottom: 10px; /* Adds some space between the title and the first menu item */
+    font-size: 24px; /* Large, readable font size */
+    color: #000; /* Light color for contrast against the sidebar's background */
+    border-bottom: 3px solid #000; /* Optional: adds a divider line below the title */
+    padding-bottom: 1px; /* Space above the divider line */
+    padding-left: 60px;
+}
+
+.sidebar ul {
+    padding-top: 0px;
+    list-style: none;
+    
+}
+
+.sidebar ul li {
+    padding: 10px;
+    margin-bottom: 10px; /* Space between items */
+}
+
+.sidebar ul li a {
+    display: flex;
+    align-items: center;
+    color: #000; /* Light text color for contrast */
+    text-decoration: none; /* No underlines on links */
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.sidebar ul li a:before {
+    content: '';
+    margin-right: 10px; /* Space between icon and text */
+    display: inline-block;
+    /* Add icons with background-image */
+}
+
+.sidebar a {
+    position: relative;
+    color: #333;
+    text-decoration: none;
+    padding: 5px 0;
+    display: inline-block;
+}
+
+.sidebar a:hover {
+    color: #000; /* Optional: Change color on hover */
+}
+
+.sidebar a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    left: 50%;
+    background: #C1F2B0;
+    border-radius: 5px;
+    transition: all 0.5s;
+}
+
+.sidebar a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+

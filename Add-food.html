@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donated Food page</title>
+
+    <link rel="stylesheet" type="text/css" href="Add-food_stylesheet.css">
+</head>
+<body>
+    <div class="nav">
+        <nav class="nav-bar">
+            <a class="logo-link" href="/User_Dashboard.html">
+                <ion-icon name="arrow-back-outline"></ion-icon>
+                <span class="logo-text">back to Dashboard</span>
+            </a>
+        </nav>
+    </div>
+
+    
+    <div id="food-form-box">
+        <h2> Add Food Item</h2>
+        <form id="food-form" action="#">
+            <div class="input-box">
+                <input type="text" id="foodName" required>
+                <label>Food Item Name</label>
+            </div>
+            <div class="input-box">
+                <input type="text" id="quantity-Available" required>
+                <label>Quantity Available</label>
+            </div>
+            <div class="input-box">
+                <input type="date" id="BBD" required>
+                <label>Best Before Date</label>
+            </div>
+            <div class="input-box">
+                <input type="text" id="food-type" required>
+                <label for="food-type">Type of Food <span class="info-icon"><ion-icon name="help-circle-outline"></ion-icon></span></label>
+                <div class="tooltip">Examples: fruits, vegetables, dairy, grains, prepared meals</div>
+            </div>
+            <div class="input-box">
+                <input type="text" id="packaging-info"  required>
+                <label for="packaging-info">Packaging Information <span class="info-icon"><ion-icon name="help-circle-outline"></ion-icon></span></label>
+                <div class="tooltip">Examples: packaged, bulk, individual servings</div>
+            </div>
+            <div class="input-box-1">
+                <textarea id="description" placeholder="Additional Notes......"></textarea>
+                <label>Additional Notes</label>
+            </div>
+            <button id="addFoodItemButton" >Add Food Item</button>
+
+        </form>
+    </div>
+    
+    <div id="foodItemsContainer"></div>
+
+
+    <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-analytics-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-database-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-auth-compat.js"></script>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="Add-food.js"></script>
+</body>
+</html>

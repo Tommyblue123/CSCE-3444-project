@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Donation</title>
+
+    <link rel="stylesheet" href="food-donation_stylesheet.css">
+</head>
+<body>
+    <div class="content-container">
+        <nav class="nav-bar" style="display: flex;margin-top: 0px;margin-left: 0px;height: auto;width: 100%;
+                                    max-width: 1200px;margin-bottom: 0px;position: relative;">
+            <a class="logo-link" href="/index.html">
+                <img src= "logo_with_transparent_background.png" alt="Logo">
+            </a>
+            <button class="hamburger">&#9776;</button>
+            <div class="navigation">
+                <a href="/About-us.html" >About Us</a>
+                <a href="/How-works.html" >How It Works</a>
+                <a href="/Geolocation.html" >Find Food</a>
+                <a href="/food-donation.html" >Donated Food</a>
+                
+            </div>
+            <a href="/User_Dashboard.html" ><img src="user_profile.png" alt="Profile Picture" class="profile-pic"></a>
+            <button id="loginButton" class="btnLogin-popup">Join Now</button>
+        </nav>
+
+        <div class="container-T">
+            <div class="text-H">
+                <h1>Discover Free Donated Food from Amazing Hearts</h1>
+            </div>
+            <div class="text-S">
+                <p>
+                    Welcome, friend! Step into a world of warmth and generosity. Here, we've gathered a treasure trove 
+                    of free donated food, lovingly provided by our incredible community. Take a moment to browse through 
+                    this list crafted with care, knowing that each item represents a gift from the heart. Together, let's 
+                    spread kindness and nourishment one meal at a time.
+                </p>
+            </div>
+        </div>
+        <div class="search-box">
+            <div class="input-box">
+                <input type="text" id="searchInput" placeholder="Enter food name to search...">
+            </div>
+            <button onclick="searchByName()">
+                <ion-icon name="search-sharp"></ion-icon>
+            </button>
+            <div id="searchResults"></div> <!-- Container to display search results -->
+        </div>
+        
+
+        <div id="food-cards-container"></div>
+
+    </div>
+
+    
+
+    <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-analytics-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-database-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-auth-compat.js"></script>
+    <script src="food-donation.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

@@ -46,13 +46,13 @@
                 <div class="input-box">
                     <input id="search-input" type="text" placeholder="Search by Zip or State">
                 </div>
-                <button id="clear-search" style="display: none; position: relative; right: 30px;">
-                    <ion-icon name="close"></ion-icon>
+                <button id="clear-search" aria-label="Clear search" style="display: none; position: relative; right: 30px;">
+                    <ion-icon name="close" role="img" class="md hydrated" aria-hidden="true"></ion-icon>
                 </button>
-                <button id="center-map">
+                <button id="center-map" aria-label="Center the map button">
                     <ion-icon name="locate"></ion-icon>
                 </button>
-                <button onclick="searchPlaces()">
+                <button onclick="searchPlaces()" aria-label="Search the map button">
                     <ion-icon name="search-sharp"></ion-icon>
                 </button>
             </div>
